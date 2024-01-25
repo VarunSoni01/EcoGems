@@ -1,0 +1,12 @@
+define("school/template-registry",[],(function(){}))
+define("school/utils/data-providers",["exports","global-utils/utils/api-compat","graphql-queries/queries/organizations/organization-companies-by-school.graphql","@ember/debug"],(function(e,t,o,i){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.fetchSchoolV2Id=function(e,i){return i.executeQuery(o.default,{schoolUrn:e}).then((e=>{var o,i
+const n=null===(o=e.data.organizationDashCompaniesBySchool)||void 0===o||null===(i=o.elements)||void 0===i?void 0:i[0]
+return(0,t.entityUrnToId)(n.entityUrn)}))}}))
+define("school/utils/school-utils",["exports","global-utils/utils/url"],(function(e,t){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.SCHOOL_HOME_URL=void 0
+e.SCHOOL_HOME_URL=`https://university.${(0,t.getDomainWithoutWWW)()}/linkedin-for-students`}))
+
+//# sourceMappingURL=engine-vendor.map
